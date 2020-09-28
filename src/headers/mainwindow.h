@@ -9,7 +9,7 @@
 
 #include <vector>
 
-#include "queue.h"
+#include "src/headers/queue.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

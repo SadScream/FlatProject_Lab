@@ -26,7 +26,7 @@
    <string>Поиск в картотеке</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="res.qrc">
+   <iconset resource="../resource/res.qrc">
     <normaloff>:/new/window_icons/icons/card.png</normaloff>:/new/window_icons/icons/card.png</iconset>
   </property>
   <property name="styleSheet">
@@ -140,7 +140,7 @@ font-family: Calibri;
   </widget>
  </widget>
  <resources>
-  <include location="res.qrc"/>
+  <include location="../resource/res.qrc"/>
  </resources>
  <connections/>
 </ui>

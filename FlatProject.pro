@@ -11,22 +11,23 @@ CONFIG += c++11
 RC_ICONS = icon.ico
 
 SOURCES += \
-    addflat.cpp \
-    main.cpp \
-    mainwindow.cpp \
-    queue.cpp \
-    searchflat.cpp
+    src/extra/addflat.cpp \
+    src/extra/queue.cpp \
+    src/extra/searchflat.cpp \
+    src/extra/mainwindow.cpp \
+    src/main.cpp \
+
 
 HEADERS += \
-    addflat.h \
-    mainwindow.h \
-    queue.h \
-    searchflat.h
+    src/headers/addflat.h \
+    src/headers/mainwindow.h \
+    src/headers/queue.h \
+    src/headers/searchflat.h
 
 FORMS += \
-    addflat.ui \
-    mainwindow.ui \
-    searchflat.ui
+    src/ui/addflat.ui \
+    src/ui/mainwindow.ui \
+    src/ui/searchflat.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -34,4 +35,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    res.qrc
+    src/resource/res.qrc

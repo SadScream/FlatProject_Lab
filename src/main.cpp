@@ -1,5 +1,5 @@
-#include "mainwindow.h"
-#include "queue.h"
+#include "src/headers/mainwindow.h"
+#include "src/headers/queue.h"
 
 #include <QApplication>
 #include <QDebug>

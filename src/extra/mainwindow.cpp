@@ -1,8 +1,8 @@
-#include "mainwindow.h"
+#include "src/headers/mainwindow.h"
 #include "ui_mainwindow.h"
-#include "queue.h"
-#include "addflat.h"
-#include "searchflat.h"
+#include "src/headers/queue.h"
+#include "src/headers/addflat.h"
+#include "src/headers/searchflat.h"
 
 #include <QIcon>
 #include <QResource>

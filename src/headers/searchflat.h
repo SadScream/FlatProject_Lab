@@ -2,7 +2,7 @@
 #define SEARCHFLAT_H
 
 #include <QDialog>
-#include <mainwindow.h>
+#include <src/headers/mainwindow.h>
 
 namespace Ui {
 class SearchFlat;

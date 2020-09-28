@@ -1,6 +1,6 @@
-#include "searchflat.h"
+#include "src/headers/searchflat.h"
 #include "ui_searchflat.h"
-#include "mainwindow.h"
+#include "src/headers/mainwindow.h"
 
 #include <QCloseEvent>
 #include <QDebug>

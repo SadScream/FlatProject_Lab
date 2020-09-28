@@ -101,7 +101,7 @@ void SearchFlat::show_error()
     show_msg->setWindowIcon(icon);
     show_msg->setIcon(QMessageBox::Warning);
     show_msg->setText("Проверьте корректность данных, введенных в поля\n"
-                      "Убедитесь в том, что ни одно из полей НЕ содержит НЕчисловых значений(в т.ч пробелов)");
+                      "Убедитесь в том, что ни одно из полей НЕ содержит НЕчисловые значения(в т.ч пробелы)");
     show_msg->setWindowTitle("Ошибка");
     show_msg->exec();
 

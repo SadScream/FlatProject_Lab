@@ -2,6 +2,7 @@
 #define SEARCHFLAT_H
 
 #include <QDialog>
+#include <QString>
 #include <src/headers/mainwindow.h>
 
 namespace Ui {
@@ -17,6 +18,9 @@ public:
 
     explicit SearchFlat(QWidget *parent = nullptr, MainWindow *parent_window = nullptr);
     ~SearchFlat();
+
+    bool is_digit(QString str);
+    bool is_empty(QString str);
 
     void search_clicked();
     void show_error();

@@ -31,7 +31,12 @@ void AddFlat::save_clicked()
     rooms = ui->rooms_line->text();
     area = ui->area_line->text();
 
-    if (addres.length() < 6 || block.toInt() == 0 || rooms.toInt() == 0 || area.toInt() == 0)
+    if (QString::fromUtf8(addres.toLocal8Bit()).length() < 6 // если длина адреса в кодировке utf-8 меньше 6
+            || block.toInt() == 0
+            || rooms.toInt() == 0
+            || area.toInt() == 0
+            || this->is_digit(addres) // если вместо адреса набор цифр
+            )
     {
         this->show_error();
         return;
@@ -41,8 +46,30 @@ void AddFlat::save_clicked()
     this->close();
 }
 
+bool AddFlat::is_digit(QString str)
+{
+    /*
+     * возвращает true, когда строка состоит строго из цифр
+     */
+
+    str = QString::fromUtf8(str.toLocal8Bit());
+
+    for (int i = 0; i < str.length(); i++)
+    {
+        if ( (str[i] < "0") || (str[i] > "9") ) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
 void AddFlat::show_error()
 {
+    /*
+     * создает окно ошибки
+     */
+
     QMessageBox *show_msg = new QMessageBox;
 
     QIcon icon = QIcon();

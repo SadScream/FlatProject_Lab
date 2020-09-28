@@ -2,6 +2,7 @@
 #define ADDFLAT_H
 
 #include <QDialog>
+#include <QString>
 #include "src/headers/mainwindow.h"
 
 namespace Ui {
@@ -17,6 +18,8 @@ public:
 
     explicit AddFlat(QWidget *parent = nullptr, MainWindow *parent_window = nullptr);
     ~AddFlat();
+
+    bool is_digit(QString str);
 
     void save_clicked();
     void show_error();

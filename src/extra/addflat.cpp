@@ -5,6 +5,7 @@
 
 #include <QCloseEvent>
 #include <QMainWindow>
+#include <QMessageBox>
 #include <QString>
 #include <QChar>
 #include <QDebug>
@@ -32,13 +33,29 @@ void AddFlat::save_clicked()
 
     if (addres.length() < 6 || block.toInt() == 0 || rooms.toInt() == 0 || area.toInt() == 0)
     {
-        // сделать вызов окна ошибки
-        this->close();
+        this->show_error();
         return;
     }
 
     this->p->add_item(addres, block, rooms, area);
     this->close();
+}
+
+void AddFlat::show_error()
+{
+    QMessageBox *show_msg = new QMessageBox;
+
+    QIcon icon = QIcon();
+    icon.addFile(":/new/window_icons/icons/card.png", QSize(), QIcon::Normal, QIcon::Off);
+
+    show_msg->setWindowIcon(icon);
+    show_msg->setIcon(QMessageBox::Warning);
+    show_msg->setText("Проверьте правильность данных, введенных в поля\nОбратите внимание: "
+                      "длина поля адрес не может быть меньше 6 символов");
+    show_msg->setWindowTitle("Ошибка");
+    show_msg->exec();
+
+    return;
 }
 
 void AddFlat::closeEvent(QCloseEvent *event) {

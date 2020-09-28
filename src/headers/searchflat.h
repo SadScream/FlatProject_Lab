@@ -19,6 +19,7 @@ public:
     ~SearchFlat();
 
     void search_clicked();
+    void show_error();
     void closeEvent(QCloseEvent *event);
 private:
     Ui::SearchFlat *ui;
